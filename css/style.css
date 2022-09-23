@@ -1,0 +1,223 @@
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Source Code Pro', monospace; 
+Tamanho 428 e*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.HeaderPrincipal{
+    width: 100vw;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #7e7e7e;
+    padding: 3rem;
+    
+}
+
+.HeaderPrincipal img {
+    width: 150px;   
+   
+}
+
+.ListaMenu {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    gap: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+}
+
+.ListaMenu a {
+    display: block;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.ListaMenu a:hover {
+    background-color: rgba(0, 0, 0, .05);
+}
+
+#btn-Mobile {
+    display: none;
+}
+
+body {
+    width: 100vw;
+    margin-bottom: 3rem;
+    background-color: #7e7e7e;
+}
+
+.BannerAnimes {
+    width: 100vw;
+    height: 100vh;
+    padding: .5rem;
+    background-image: url(../img/Banner.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(255, 255, 255);   
+    
+}
+
+.BannerAnimes p {
+    padding: 20px;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: justify;
+}
+
+.BannerAnimes button {
+    width: 60%;
+    padding: 10px;
+}
+
+.ConteudoAnimes {    
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.ConteudoAnimes h1 {
+    font-size: 1.5rem;
+    padding: 2rem;
+    font-family: 'Source Code Pro', monospace;
+
+}
+
+.AnimeConteiner {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+
+
+.CardAnimes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+    align-items: center; 
+    width: 90% ;
+    height: 450px;
+    background-color: rgb(128, 122, 71);
+    border-radius: 15px;
+    overflow: hidden;
+    
+}
+
+.CardAnimes img {
+    width: 100%;
+    height: 350px;
+    
+}
+
+.CardAnimes h2 {
+    padding: 15px;    
+}
+
+.CardAnimes p {
+    margin-bottom: 15px;
+}
+
+.ButtonCard {
+    width: 60%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 428px) {
+    #btn-Mobile {
+        display: flex ;
+        align-items: center;
+        padding: .5rem 1rem;
+        background: none;
+        border: none;
+        font-family: 'Source Code Pro', monospace;
+        font-size: 1.5rem;
+        cursor: pointer;
+        gap: .5rem;
+    }
+
+    #Hamburgue {
+        border-top: 2px solid;
+        width: 20px;
+    }
+
+    #Hamburgue::after , #Hamburgue::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+
+    #nav.active #Hamburgue {
+        border-top-color: transparent;
+    }
+
+    #nav.active #Hamburgue::after{
+        transform: rotate(135deg);
+        top: -7px;
+    }
+
+    #nav.active #Hamburgue::before{
+        transform: rotate(-135deg);
+        
+    }
+
+
+    #btn-Mobile:hover {
+        background-color: rgba(0, 0, 0, .05);
+    }
+
+    .ListaMenu {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 150px;
+        right: 0px;
+        background-color: #6e6e6e;
+        height: 0px;
+        transition: .6s;
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
+        font-size: 1rem;
+
+    }
+
+    .ListaMenu a {
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 2px solid rgba(0, 0, 0, .05);
+
+    }
+
+
+    #nav.active .ListaMenu {
+        height: calc(100vh - 150px);
+        visibility: visible;
+
+    }
+    
+    
+}
