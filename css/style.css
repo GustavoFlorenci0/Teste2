@@ -2,8 +2,8 @@
 font-family: 'Source Code Pro', monospace; 
 Tamanho 428 e*/
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
 }
 
@@ -51,8 +51,6 @@ Tamanho 428 e*/
 
 body {
     width: 100vw;
-    margin-bottom: 3rem;
-    background-color: #7e7e7e;
 }
 
 .BannerAnimes {
@@ -66,7 +64,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: rgb(255, 255, 255);   
+    color: rgb(255, 255, 255);
     
 }
 
@@ -80,14 +78,17 @@ body {
 .BannerAnimes button {
     width: 60%;
     padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
-.ConteudoAnimes {    
+.ConteudoAnimes {  
     display: flex;
     flex-direction: column;    
     justify-content: center;
     align-items: center;
-   
+    background-color: #6e6e6e;
+    padding: 3rem;
 }
 
 .ConteudoAnimes h1 {
@@ -98,7 +99,7 @@ body {
 }
 
 .AnimeConteiner {
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -112,8 +113,8 @@ body {
     flex-direction: column;
     justify-content: center;   
     align-items: center; 
-    width: 90% ;
-    height: 450px;
+    width: 100% ;
+    height: 20rem;
     background-color: rgb(128, 122, 71);
     border-radius: 15px;
     overflow: hidden;
@@ -139,6 +140,54 @@ body {
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.rodape {
+    width: 100%;
+    display: flex;
+    flex-direction: column;    
+    background-color: #4e4e4e;
+
+}
+
+#sobreNos {
+    margin-left: 4.3rem; 
+}
+
+.rodape h2 {
+    margin-top: .5rem;
+}
+
+.rodape p {
+    font-size: .8rem;
+        
+}
+
+.CardFooter {
+        
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    margin-left: 4.3rem; 
+    margin-bottom: 1rem;
+}
+
+.CardFooter a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.CardFooter img {
+    width: 50px;
+    
+}
+
+.CardFooter p {
+    font-size: 1rem;
+    font-family: 'Source Code Pro', monospace;
+    padding: .5rem;
 }
 
 @media (max-width: 428px) {
@@ -180,8 +229,7 @@ body {
     }
 
     #nav.active #Hamburgue::before{
-        transform: rotate(-135deg);
-        
+        transform: rotate(-135deg);        
     }
 
 
@@ -209,15 +257,52 @@ body {
         padding: 1rem 0;
         margin: 0 1rem;
         border-bottom: 2px solid rgba(0, 0, 0, .05);
-
     }
-
-
     #nav.active .ListaMenu {
         height: calc(100vh - 150px);
         visibility: visible;
+    }    
+}
+@media (min-width: 1440px) {
 
+    .HeaderPrincipal {
+        height: 8rem;
+    }
+
+    .HeaderPrincipal img {
+        width: 250px;
     }
     
+    .ListaMenu a {
+        font-size: 3rem;
+    }
+
+    .BannerAnimes h1 {
+        font-size: 3rem;
+    }
+
+    .BannerAnimes p {
+        font-size: 1.5rem;
+    }
+
+    .AnimeConteiner {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .CardAnimes {
+        width: 30%;
+        height: 30rem;
+    }
+
+    #sobreNos {
+        margin-left: 7rem; 
+    }
+
+    .CardFooter {
+        margin-left: 7rem;
+    }
     
 }

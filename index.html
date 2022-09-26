@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="pt-br">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Source+Code+Pro:ital,wght@0,600;1,300&display=swap" rel="stylesheet">
-    <title>Teste anime</title>
+    <title>GF anime</title>
 </head>
 <body>
     <header class=" HeaderPrincipal">
@@ -20,20 +20,20 @@
             </button>
             
             <ul class="ListaMenu">
-                <li><a href="/"> Home </a></li>
-                <li><a href="/"> Itens </a></li>
-                <li><a href="/"> Sobre nós </a></li>
+                <li><a href="#home"> Home </a></li>
+                <li><a href="#item"> Itens </a></li>
+                <li><a href="#sobreNos"> Sobre nós </a></li>
                 <li><a href="/"> Login </a></li>
             </ul>
         </nav>       
     </header>
     <main>
-        <section class="BannerAnimes">
+        <section class="BannerAnimes" id="home">
             <h1>GF Animes</h1>
             <p>Em nosso site temos os animes mais atualizados do mercado e no momento do lançamento.</p>
             <button> Explorar </button>
         </section>
-        <section class="ConteudoAnimes">
+        <section class="ConteudoAnimes" id="item">
             <h1> Lista de Animes </h1>
             <div class="AnimeConteiner">
                 <article class="CardAnimes">
@@ -76,18 +76,23 @@
         </section>
             
     </main>
-
-    <footer>
-        <section>
+    <footer class="rodape" >
+        <div id="sobreNos">
             <h2>
                 Gustavo Florencio da Silva
             </h2>
-            <p> Responsavel pelo desenvolvimento deste site</p>
-            <a href="google.com"> <img src="./img/linkedin.png" alt="Linkedln"> </a>
-            <a href="google.com"> <img src="./img/github.webp" alt="Link Github"></a>
-        </section>
+            <p> Responsavel pelo desenvolvimento desta atividade. </p>
+        </div>
+        <div class="CardFooter">
+            <a href="https://www.linkedin.com/in/gustavo-florencio56/" target="_blank" > <img src="./img/linkedin.png" alt="Linkedln">  </a>
+            <a href="https://www.linkedin.com/in/gustavo-florencio56/" target="_blank" > <p>@gustavo-florencio56</p>  </a>                
+        </div>
+        <div class="CardFooter">
+            <a href="https://github.com/GustavoFlorenci0" target="_blank" > <img src="./img/github.webp" alt="Link Github"></a>
+            <a href="https://github.com/GustavoFlorenci0" target="_blank" > <p>@GustavoFlorenci0</p> </a>                
+        </div>
     </footer>
 
 </body>
-<script src="./javaScript/Script.js"></script>
+<script src="./javaScript/Script.js" ></script>
 </html>
